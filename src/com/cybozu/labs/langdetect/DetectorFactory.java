@@ -43,6 +43,14 @@ public class DetectorFactory {
     }
     static private DetectorFactory instance_ = new DetectorFactory();
 
+    public static DetectorFactory getDetectorFactoryInstance(){
+        return instance_;
+    }
+
+    public static void resetInstance(){
+        instance_ = new DetectorFactory();
+    }
+
     /**
      * Load profiles from specified directory.
      * This method must be called once before language detection.
